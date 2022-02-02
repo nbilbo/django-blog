@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %} {% endblock%}</title>
+  <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Mariana Morais</h1>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock%}
+  </main>
+</body>
+</html>

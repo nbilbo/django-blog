@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% block title %} {% endblock%}</title>
-  <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+  <title>{% block title %} Felipe Morais 🐍 {% endblock%}</title>
+  <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Mariana Morais</h1>
+    <h1><a href="{% url 'blog:list' %}">Felipe Morais</a></h1>
   </header>
 
   <main>

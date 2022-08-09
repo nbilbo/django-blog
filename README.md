@@ -1,3 +1,3 @@
 # Django blog
 
-![Optional Text](assets/image.png)
+![sample](assets/sample.png)

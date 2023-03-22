@@ -5,6 +5,25 @@ body {
   color: #111111;
 }
 
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.nav-item {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.brand {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  grid-column: 2;
+}
+
 h1 {
   text-align: center;
   font-family: serif;

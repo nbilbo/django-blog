@@ -7,13 +7,15 @@
   <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1><a href="{% url 'blog:list' %}">Felipe Morais</a></h1>
-  </header>
+  <nav class="nav">
+   <a href="{% url 'blog:post-list'%}" class="nav-item brand">Felipe Morais</a>
+   <a href="{% url 'blog:api-view'%}" class="nav-item" target="blank_">api</a>
+  </nav>
 
   <main>
     {% block content %}
     {% endblock%}
   </main>
+
 </body>
 </html>

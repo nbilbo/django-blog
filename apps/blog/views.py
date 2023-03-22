@@ -1,6 +1,7 @@
 from django.views.generic import DetailView, ListView
 from django.utils.text import slugify
 
+from rest_framework import permissions
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -22,7 +23,7 @@ class PostDetailView(DetailView):
 class PostListApi(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
     def perform_create(self, serializer):
         data = serializer.validated_data
